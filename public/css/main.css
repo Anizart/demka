@@ -1,0 +1,14 @@
+.new-order__link-block {
+  height: 100px;
+  width: clamp(240px, 50vw, 470px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #c6ecf5;
+  background: #fff;
+  transition: 0.4s;
+
+  &:hover {
+    background: #c6ecf5;
+  }
+}

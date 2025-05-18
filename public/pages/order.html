@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Мой Не Сам</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="/pages/main.html" class="link">
+                    <img src="/img/logo.png" alt="logo" />
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <form class="form">
+                <h1 class="form__text text">Формирование новой заявки:</h1>
+                <div class="message"></div>
+                <input name="address" type="text" class="form__input" placeholder="Адрес" required />
+                <input name="tel" type="tel" class="form__input" placeholder="Тел" required />
+                <input name="data" type="date" class="form__input" placeholder="Желаемоя дата" required />
+                <input name="time" type="time" class="form__input" placeholder="Время получения" required />
+                <input name="service" list="service" type="text" class="form__input" placeholder="Выберете услугу" required />
+                <datalist id="service">
+                    <option>общий клининг</option>
+                    <option>генеральная уборка</option>
+                    <option>послестроительная уборка</option>
+                    <option>химчистка ковров и мебели</option>
+                    <option>Иная услуга:</option>
+                </datalist>
+                <input name="payment" list="payment" type="text" class="form__input" placeholder="Выберете тип оплаты" required />
+                <datalist id="payment">
+                    <option>наличные</option>
+                    <option>банковская карта</option>
+                </datalist>
+                <button class="btn" type="submit">Оформить</button>
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="logo">
+                <a href="/pages/main.html" class="link">
+                    <img src="/img/logo.png" alt="logo" />
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/order.js"></script>
+</body>
+</html>
