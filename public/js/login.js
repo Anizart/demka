@@ -5,8 +5,8 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault()
 
   try {
-    const login = form.querySelector('input[name="login"]').value
-    const password = form.querySelector('input[name="password"]').value
+    let login = form.querySelector('input[name="login"]').value
+    let password = form.querySelector('input[name="password"]').value
 
     if (!login || !password) {
       message.textContent = "Все поля обязательны для заполнения"

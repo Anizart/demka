@@ -5,11 +5,11 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault()
 
   try {
-    const login = form.querySelector('input[name="login"]').value
-    const password = form.querySelector('input[name="password"]').value
-    const name = form.querySelector('input[name="name"]').value
-    const tel = form.querySelector('input[name="tel"]').value
-    const email = form.querySelector('input[name="email"]').value
+    let login = form.querySelector('input[name="login"]').value
+    let password = form.querySelector('input[name="password"]').value
+    let name = form.querySelector('input[name="name"]').value
+    let tel = form.querySelector('input[name="tel"]').value
+    let email = form.querySelector('input[name="email"]').value
 
     if (!login || !password || !name || !tel || !email) {
       message.textContent = "Все поля обязательны для заполнения"
