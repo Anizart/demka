@@ -16,6 +16,22 @@ form.addEventListener("submit", async (e) => {
       return
     }
 
+    if (login.length < 6) {
+      message.textContent = "Логин Должен быть не менее 6 символов!"
+      return
+    }
+
+    if (password.length < 6) {
+      message.textContent = "Пароль должен быть не менее 6 символов!"
+      return
+    }
+
+    // const phoneRegex = /^\+7$$\d{3}$$-\d{3}-\d{2}-\d{2}$/
+    // if (!phoneRegex.test(tel)) {
+    //   message.textContent = "Телефон должен быть в формате +7(XXX)-XXX-XX-XX"
+    //   return
+    // }
+
     const userData = {
       login,
       password,
