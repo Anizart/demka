@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/styles.css">
-    <title>Мой Не Сам</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <title>Едем, но это не точно</title>
 </head>
 <body>
     <header class="header">
@@ -25,21 +28,34 @@
                 <input name="address" type="text" class="form__input" placeholder="Адрес" required />
                 <input name="tel" type="tel" class="form__input" placeholder="Тел" required />
                 <input name="data" type="date" class="form__input" placeholder="Желаемоя дата" required />
-                <input name="time" type="time" class="form__input" placeholder="Время получения" required />
-                <input name="service" list="service" type="text" class="form__input" placeholder="Выберете услугу" required />
-                <datalist id="service">
-                    <option>общий клининг</option>
-                    <option>генеральная уборка</option>
-                    <option>послестроительная уборка</option>
-                    <option>химчистка ковров и мебели</option>
-                    <option>Иная услуга:</option>
+                <input name="time" type="time" class="form__input" placeholder="Время" required />
+                <input name="series" type="text" class="form__input" placeholder="Серия вод. удос-я" required />
+                <input name="number" type="text" class="form__input" placeholder="Номер вод. удос-я" required />
+                <input name="dateIssue" type="text" class="form__input" placeholder="Дата выдачи вод. удос-я" required />
+                <input name="model" list="model" type="text" class="form__input" placeholder="Выберете модель" required />
+                <datalist id="model">
+                    <option>Toyota</option>
+                    <option>Honda</option>
+                    <option>Ford</option>
+                    <option>BMW</option>
+                    <option>Volkswagen</option>
                 </datalist>
-                <input name="payment" list="payment" type="text" class="form__input" placeholder="Выберете тип оплаты" required />
+                <input name="brand" list="brand" type="text" class="form__input" placeholder="Выберете марку" required />
+                <datalist id="brand">
+                    <option>Camry</option>
+                    <option>Polo</option>
+                    <option>Accord</option>
+                </datalist>
+                <input name="payment" list="payment" type="text" class="form__input" placeholder="Тип оплаты" required />
                 <datalist id="payment">
                     <option>наличные</option>
                     <option>банковская карта</option>
                 </datalist>
-                <button class="btn" type="submit">Оформить</button>
+                <label class="form__checkbox">
+                    <input type="checkbox" id="agreement" name="agreement">
+                    Я ознакомлен с правилами, все данные верны
+                </label>
+                <button class="btn" type="submit" disabled>Отправить заявку</button>
             </form>
         </div>
     </main>

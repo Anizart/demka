@@ -1,5 +1,15 @@
 const form = document.querySelector(".form")
 const message = document.querySelector(".message")
+const checkbox = document.getElementById("agreement")
+const button = document.querySelector(".btn")
+
+checkbox.addEventListener("change", () => {
+  if (checkbox.checked) {
+    button.disabled = false
+  } else {
+    button.disabled = true
+  }
+})
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault()
@@ -9,20 +19,39 @@ form.addEventListener("submit", async (e) => {
     let tel = form.querySelector('input[name="tel"]').value
     let data = form.querySelector('input[name="data"]').value
     let time = form.querySelector('input[name="time"]').value
-    let service = form.querySelector('input[name="service"]').value
+    let series = form.querySelector('input[name="series"]').value
+    let number = form.querySelector('input[name="number"]').value
+    let dateIssue = form.querySelector('input[name="dateIssue"]').value
+    let model = form.querySelector('input[name="model"]').value
+    let brand = form.querySelector('input[name="brand"]').value
     let payment = form.querySelector('input[name="payment"]').value
 
-    if (!address || !tel || !data || !time || !service || !payment) {
+    if (
+      !address ||
+      !tel ||
+      !data ||
+      !time ||
+      !series ||
+      !number ||
+      !dateIssue ||
+      !model ||
+      !brand ||
+      !payment
+    ) {
       message.textContent = "Все поля обязательны для заполнения"
       return
     }
 
-    const orderData = {
+    let orderData = {
       address,
       tel,
       data,
       time,
-      service,
+      series,
+      number,
+      dateIssue,
+      model,
+      brand,
       payment,
     }
 
@@ -41,6 +70,7 @@ form.addEventListener("submit", async (e) => {
       form.reset()
 
       setTimeout(() => {
+        message.textContent = ""
         window.location.href = "/pages/main.html"
       }, 1000)
     } else {

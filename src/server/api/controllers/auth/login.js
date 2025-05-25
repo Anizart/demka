@@ -11,7 +11,7 @@ export const login = async (req, res) => {
     }
 
     // Проверка роли:
-    if (login === "adminka" && password === "password") {
+    if (login === "avto2024" && password === "poehali") {
       return res.status(200).json({ message: "Добро пожаловать, админ" })
     }
 

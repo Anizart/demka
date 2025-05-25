@@ -13,10 +13,6 @@ const Orders = sequelize.define(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    serviceId: {
-      type: DataTypes.INTEGER,
-      allowNull: true, // чтобы SET NULL работал
-    },
     address: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -27,22 +23,43 @@ const Orders = sequelize.define(
       allowNull: false,
     },
     data: {
-      type: DataTypes.DATE,
+      type: DataTypes.DATEONLY,
       allowNull: false,
     },
     time: {
       type: DataTypes.TIME,
       allowNull: false,
     },
-    status: {
+    series: {
       type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: "новая заявка",
+    },
+    number: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    dateIssue: {
+      // можно строковый тип использовать?
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    brand: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    model: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     payment: {
       // это правильно?
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    status: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: "новая заявка",
     },
     reason: {
       //так это сделать "причина отказа"?

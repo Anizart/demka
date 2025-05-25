@@ -32,12 +32,14 @@ form.addEventListener("submit", async (e) => {
       message.textContent = data.message
       form.reset()
 
-      if (login === "adminka" && password === "password") {
+      if (login === "avto2024" && password === "poehali") {
         setTimeout(() => {
+          message.textContent = ""
           window.location.href = "/pages/adminka.html"
         }, 1000)
       } else {
         setTimeout(() => {
+          message.textContent = ""
           window.location.href = "/pages/main.html"
         }, 1000)
       }

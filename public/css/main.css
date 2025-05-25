@@ -1,6 +1,6 @@
 .new-order__link-block {
   height: 100px;
-  width: clamp(240px, 50vw, 470px);
+  /* width: clamp(240px, 50vw, 470px); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,5 +10,24 @@
 
   &:hover {
     background: #c6ecf5;
+  }
+}
+
+.history-order__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  .history-order__card {
+    max-width: 620px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    border: 5px solid #c6ecf5;
+    padding: 50px 28px;
+  }
+
+  .history-order__text {
+    font-size: clamp(12px, 2vw, 14px);
   }
 }
